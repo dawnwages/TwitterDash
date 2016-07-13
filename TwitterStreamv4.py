@@ -11,7 +11,6 @@ from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 import csv
 import sys
-#What is twitter stream time for?
 import time
 
 ckey = 'db1cJzQZ3sNay0ssOJ1qI05MC'
@@ -24,13 +23,16 @@ asecret = 'GramRetLfnazjSV0fnXUG9Aca6VUweLrvAZMSD0Naklpp'
 class listener(StreamListener):
     def on_data(self, data):
         try:
-            localtime = time.asctime( time.localtime(time.time()) )
+            localtime=time.asctime( time.localtime(time.time()) )
             tweet=data.split(',"text":"')[1].split('","source')[0]
-            print (tweet)
+            author=data.author.screen_name
+            created=data.created_at
+            text=data.text
+            print (localtime, tweet, author, created, text)
             
 #how are we using time? like when it spits out... i don't get it
 #Insert Date and Time of Stream in file name -- HOW?
-            saveThis = str(localtime)+'::'+tweet
+            saveThis = str(localtime)+'$'+tweet+'$'+author+'$'+created+'$'+text
             saveFile = open('twitter-data.txt', 'a')
             saveFile.write(saveThis)
             saveFile.write('\n')
