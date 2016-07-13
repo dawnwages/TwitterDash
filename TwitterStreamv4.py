@@ -1,11 +1,15 @@
 #Tutorial from https://www.youtube.com/watch?v=pUUxmvvl2FE for Python=2
+#Tutorial from https://github.com/nltk/nltk/blob/develop/nltk/twitter/twitter_demo.py
 #Author Dawn Wages
-#Last Updated: 7/13/16 3:54 am
+
 
 """ TwitterStreamv4.py Streaming twitter data and outputing to a csv file based on criteria. """
 
 __author__ = "Dawn Michelle Wages"
 
+#Learn more about the nltk twitter module
+from nltk.twitter import Query, Streamer, Twitter, TweetViewer, TweetWriter,\
+     credsfromfile
 from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
@@ -13,6 +17,10 @@ import csv
 import sys
 #What is twitter stream time for?
 import time
+
+
+
+
 
 ckey = 'db1cJzQZ3sNay0ssOJ1qI05MC'
 csecret = 'SB6BqMy8jr9htGGGsOU5HnGHa4HVM9yc6dYIY4czfpaxg9RULR'
