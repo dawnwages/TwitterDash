@@ -24,13 +24,13 @@ asecret = 'GramRetLfnazjSV0fnXUG9Aca6VUweLrvAZMSD0Naklpp'
 class listener(StreamListener):
     def on_data(self, data):
         try:
-
+            localtime = time.asctime( time.localtime(time.time()) )
             tweet=data.split(',"text":"')[1].split('","source')[0]
             print (tweet)
             
 #how are we using time? like when it spits out... i don't get it
 #Insert Date and Time of Stream in file name -- HOW?
-            saveThis = str(time.time())+'::'+tweet
+            saveThis = str(localtime)+'::'+tweet
             saveFile = open('twitter-data.txt', 'a')
             saveFile.write(saveThis)
             saveFile.write('\n')
