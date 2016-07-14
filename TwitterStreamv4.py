@@ -13,10 +13,10 @@ import csv
 import sys
 import time
 
-ckey = 'db1cJzQZ3sNay0ssOJ1qI05MC'
-csecret = 'SB6BqMy8jr9htGGGsOU5HnGHa4HVM9yc6dYIY4czfpaxg9RULR'
-atoken = '1496598055-RVsANUjnou1SE4h7OpuWMud8OXFaBAZkmpKkkZJ'
-asecret = 'GramRetLfnazjSV0fnXUG9Aca6VUweLrvAZMSD0Naklpp'
+ckey = 'Replace'
+csecret = 'Replace'
+atoken = 'Replace'
+asecret = 'Replace'
 #Add title headers
 #Add location
 #I need a database for this to automatically go to which Tableau will reference
